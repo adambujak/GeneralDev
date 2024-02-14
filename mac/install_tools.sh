@@ -31,6 +31,7 @@ brew install tmux
 
 # setup python venv
 python3 -m venv ~/venv
+source ~/venv/bin/activate
 
 ######################################################################
 ############################## nvim ##################################
