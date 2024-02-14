@@ -8,6 +8,7 @@ HOME_PATH=$(pwd)
 HOME_PATH=$(echo $HOME_PATH | sed 's/\//\\\//g')
 popd > /dev/null
 
-cp global_gitignore ~/.gitignore
-sed "s/HOME_DIRECTORY/${HOME_PATH}/g" "global_gitconfig" > ~/.gitconfig
+PROFILE_PATH="${PROFILE_PATH:-profiles/adam}"
+cp $PROFILE_PATH/global_gitignore ~/.gitignore
+sed "s/HOME_DIRECTORY/${HOME_PATH}/g" "$PROFILE_PATH/global_gitconfig" > ~/.gitconfig
 

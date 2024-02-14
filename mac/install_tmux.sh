@@ -1,10 +1,10 @@
 #!/bin/bash
+PROFILE_PATH="${PROFILE_PATH:-profiles/adam}"
 
 brew install tmux
 
-rm -rf ~/.tmux ~/.tmux.conf
+rm -rf ~/.tmux
 
-cp .tmux.conf ~
+cat ~/.tmux.conf >> ~/.tmux_conf_backup
 
-cat light_tmux_theme >> ~/.tmux.conf
-tmux source-file ~/.tmux.conf
+cp $PROFILE_PATH/tmux.conf ~/.tmux.conf
