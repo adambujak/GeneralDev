@@ -11,6 +11,9 @@ pip3 uninstall pynvim
 rm -rf ~/.local/share/nvim/
 rm -rf ~/venv
 rm -rf ~/.nvim
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
 
 rm ~/.gitignore
 rm ~/.gitconfig
