@@ -90,3 +90,19 @@ vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts
 -- Remove lsp side column
 vim.opt.signcolumn = 'no'
 
+-- Disable inline errors
+function disable_virtual_text()
+    vim.diagnostic.config({ virtual_text = false })
+end
+
+-- Enable inline errors
+function enable_virtual_text()
+    vim.diagnostic.config({ virtual_text = true })
+end
+
+disable_virtual_text()
+
+vim.api.nvim_set_keymap('n', '<space>ed', '<cmd>lua disable_virtual_text()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>ee', '<cmd>lua enable_virtual_text()<cr>', { noremap = true, silent = true })
+
+
