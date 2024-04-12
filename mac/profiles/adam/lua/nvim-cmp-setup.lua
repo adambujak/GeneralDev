@@ -80,6 +80,8 @@ nvim_lsp.clangd.setup {
   capabilities = capabilities
 }
 
+require'lspconfig'.pyright.setup{}
+
 local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
